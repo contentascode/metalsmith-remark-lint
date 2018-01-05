@@ -1,6 +1,6 @@
 {
     "name": "metalsmith-remark-lint",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Lint markdown with remark-lint",
     "license": "MIT",
     "homepage": "https://github.com/contentascode/metalsmith-remark-lint",
