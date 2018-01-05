@@ -1,58 +1,63 @@
 {
-  "name": "metalsmith-remark",
-  "version": "5.0.0",
-  "description": "Convert markdown to html with remark",
-  "license": "MIT",
-  "homepage": "https://github.com/ben-eb/metalsmith-remark",
-  "author": {
-    "name": "Ben Briggs",
-    "email": "beneb.info@gmail.com",
-    "url": "http://beneb.info"
-  },
-  "main": "dist/index.js",
-  "scripts": {
-    "pretest": "eslint src",
-    "prepublish": "del-cli dist && BABEL_ENV=publish babel src --out-dir dist --ignore /__tests__/",
-    "test": "ava src/__tests__"
-  },
-  "files": [
-    "LICENSE-MIT",
-    "dist"
-  ],
-  "dependencies": {
-    "remark": "^8.0.0",
-    "remark-html": "^6.0.1"
-  },
-  "devDependencies": {
-    "assert-dir-equal": "^1.0.1",
-    "ava": "^0.16.0",
-    "babel-cli": "^6.5.1",
-    "babel-core": "^6.5.2",
-    "babel-plugin-add-module-exports": "^0.2.0",
-    "babel-preset-es2015": "^6.5.0",
-    "babel-preset-es2015-loose": "^7.0.0",
-    "babel-preset-stage-0": "^6.5.0",
-    "babel-register": "^6.9.0",
-    "coveralls": "^2.11.6",
-    "del-cli": "^0.2.0",
-    "eslint": "^3.0.0",
-    "eslint-config-cssnano": "^3.0.0",
-    "eslint-plugin-babel": "^3.3.0",
-    "eslint-plugin-import": "^2.0.1",
-    "metalsmith": "^2.1.0",
-    "remark-squeeze-paragraphs": "^3.0.0",
-    "remark-strip-badges": "^3.0.0"
-  },
-  "keywords": [
-    "markdown",
-    "remark",
-    "metalsmith"
-  ],
-  "eslintConfig": {
-    "extends": "cssnano"
-  },
-  "ava": {
-    "require": "babel-register"
-  },
-  "repository": "ben-eb/metalsmith-remark"
+    "name": "metalsmith-remark-lint",
+    "version": "0.0.1",
+    "description": "Lint markdown with remark-lint",
+    "license": "MIT",
+    "homepage": "https://github.com/contentascode/metalsmith-remark-lint",
+    "author": {
+        "name": "Jun Matsushita",
+        "email": "jun@iilab.org",
+        "url": "https://iilab.org"
+    },
+    "main": "dist/index.js",
+    "scripts": {
+        "pretest": "eslint src",
+        "prepublish": "del-cli dist && BABEL_ENV=publish babel src --out-dir dist --ignore /__tests__/",
+        "build:watch": "nodemon --watch src --exec npm run prepublish",
+        "test": "ava src/__tests__"
+    },
+    "files": [
+        "LICENSE-MIT",
+        "dist"
+    ],
+    "dependencies": {
+        "async": "^2.6.0",
+        "remark": "^8.0.0",
+        "remark-frontmatter": "^1.2.0",
+        "remark-preset-lint-markdown-style-guide": "^2.1.1",
+        "unified-engine": "^5.0.0",
+        "vfile": "^2.3.0",
+        "vfile-reporter": "^4.0.0"
+    },
+    "devDependencies": {
+        "assert-dir-equal": "^1.0.1",
+        "ava": "^0.16.0",
+        "babel-cli": "^6.5.1",
+        "babel-core": "^6.5.2",
+        "babel-plugin-add-module-exports": "^0.2.0",
+        "babel-preset-es2015": "^6.5.0",
+        "babel-preset-es2015-loose": "^7.0.0",
+        "babel-preset-stage-0": "^6.5.0",
+        "babel-register": "^6.9.0",
+        "coveralls": "^2.11.6",
+        "del-cli": "^0.2.0",
+        "eslint": "^3.0.0",
+        "eslint-config-cssnano": "^3.0.0",
+        "eslint-config-prettier": "^2.9.0",
+        "eslint-plugin-babel": "^3.3.0",
+        "eslint-plugin-import": "^2.0.1",
+        "metalsmith": "^2.1.0",
+        "nodemon": "^1.14.7",
+        "remark-squeeze-paragraphs": "^3.0.0",
+        "remark-strip-badges": "^3.0.0"
+    },
+    "keywords": [
+        "markdown",
+        "remark",
+        "metalsmith"
+    ],
+    "ava": {
+        "require": "babel-register"
+    },
+    "repository": "ben-eb/metalsmith-remark"
 }
